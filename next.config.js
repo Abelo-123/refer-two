@@ -1,6 +1,5 @@
-// next.config.js
-const NextConfig = {
-  // Your configuration options here
+const nextConfig = {
+  /* config options here */
 };
 
-module.exports = NextConfig;
+export default nextConfig;

@@ -30,7 +30,7 @@ bot.onText(/\/start (.+)/, (msg, match) => {
                 [
                     {
                         text: 'Visit the URL',
-                        url: `https://t.me/PaxyoSMMRefer_bot?startapp=${dynamicUrl}`, // Use the dynamic URL
+                        url: `https://t.me/PaxyoSMMRefer_bot?startapp=${param}`, // Use the dynamic URL
                     },
                 ],
             ],
