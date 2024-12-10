@@ -1,10 +1,16 @@
 {
     "version": 2,
     "builds": [
-      { "src": "app/api/telegram/route.ts", "use": "@vercel/node" }
+      {
+        "src": "app/api/telegram/bot.js",
+        "use": "@vercel/node"
+      }
     ],
     "routes": [
-      { "src": "/api/telegram", "dest": "/app/api/telegram/route.ts" }
+      {
+        "src": "/api/telegram",
+        "dest": "/app/api/telegram/bot.js"
+      }
     ]
   }
   

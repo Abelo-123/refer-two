@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-     "set-webhook": "curl -X POST https://api.telegram.org/bot7766724477:AAHp0r8SvGJIIO9l02VsY6FuZisWFX3YvAg/setWebhook -d url=https://refer-two-dv8l.vercel.app/api/telegram",
+    "set-webhook": "curl -X POST https://api.telegram.org/bot7766724477:AAHp0r8SvGJIIO9l02VsY6FuZisWFX3YvAg/setWebhook -d url=https://refer-two-dv8l.vercel.app/api/telegram",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "next": "15.0.4",
+    "node-fetch": "^3.3.2",
     "node-telegram-bot-api": "^0.66.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
