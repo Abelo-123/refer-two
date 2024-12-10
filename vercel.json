@@ -4,12 +4,20 @@
       {
         "src": "app/api/telegram/bot.js",
         "use": "@vercel/node"
+      },
+      {
+        "src": "app/**/*.{ts,tsx}",
+        "use": "@vercel/next"
       }
     ],
     "routes": [
       {
         "src": "/api/telegram",
         "dest": "/app/api/telegram/bot.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/app/$1"
       }
     ]
   }
