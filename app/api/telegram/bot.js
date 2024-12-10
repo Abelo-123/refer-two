@@ -21,7 +21,7 @@ bot.onText(/\/start (.+)/, (msg, match) => {
     const param = match[1]; // Extracted parameter from the deep link
 
     // Construct the dynamic URL with the extracted parameter
-    const dynamicUrl = `https://${param}.com`;
+    const dynamicUrl = `https://t.me/PaxyoSMMRefer_bot?startapp=${param}`;
 
     // Create a button to open the constructed URL
     const keyboard = {
@@ -30,7 +30,7 @@ bot.onText(/\/start (.+)/, (msg, match) => {
                 [
                     {
                         text: 'Visit the URL',
-                        url: `https://t.me/PaxyoSMMRefer_bot?startapp=${param}`, // Use the dynamic URL
+                        url: dynamicUrl, // Use the dynamic URL
                     },
                 ],
             ],
