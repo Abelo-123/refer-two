@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "set-webhook": "curl -X POST https://api.telegram.org/bot7766724477:AAHp0r8SvGJIIO9l02VsY6FuZisWFX3YvAg/setWebhook -d url=https://refer-two-dv8l.vercel.app/api/telegram",
-    "dev": "next dev",
+     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
