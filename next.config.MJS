@@ -1,6 +1,6 @@
-// next.config.js
+// next.config.mjs
 const NextConfig = {
   // Your configuration options here
 };
 
-module.exports = NextConfig;
+export default NextConfig;
