@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
+const { NextResponse } = require('next/server');
 
-export const POST = async (req: NextRequest) => {
+export const POST = async (req) => {
   const BOT_TOKEN = process.env.BOT_TOKEN;
 
   if (!BOT_TOKEN) {
