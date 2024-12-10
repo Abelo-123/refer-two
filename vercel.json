@@ -6,7 +6,7 @@
         "use": "@vercel/node"
       },
       {
-        "src": "next.config.js",
+        "src": "next.config.MJS",
         "use": "@vercel/next"
       }
     ],
