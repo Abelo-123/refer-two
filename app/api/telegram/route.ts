@@ -1,4 +1,4 @@
-const { NextResponse } = require('next/server');
+import { NextResponse } from 'next/server';
 
 export const POST = async (req) => {
   const BOT_TOKEN = process.env.BOT_TOKEN;
