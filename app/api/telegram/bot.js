@@ -1,12 +1,14 @@
 const TelegramBot = require('node-telegram-bot-api');
 const express = require('express');
+require('dotenv').config(); // Load .env for local development
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json()); // Middleware to parse JSON body
 
-const BOT_TOKEN = process.env.WEBHOOK_URL
+const BOT_TOKEN = process.env.BOT_TOKEN
 
 const bot = new TelegramBot(BOT_TOKEN);
 
