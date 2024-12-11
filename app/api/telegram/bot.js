@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json()); // Middleware to parse JSON body
 
-const BOT_TOKEN = "7766724477:AAHp0r8SvGJIIO9l02VsY6FuZisWFX3YvAg";
+const BOT_TOKEN = process.env.WEBHOOK_URL
 
 const bot = new TelegramBot(BOT_TOKEN);
 
