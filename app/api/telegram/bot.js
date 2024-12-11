@@ -4,13 +4,13 @@ require('dotenv').config(); // Load .env for local development
 
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 
 app.use(express.json()); // Middleware to parse JSON body
 
-const BOT_TOKEN = process.env.BOT_TOKEN
+const token = process.env.BOT_TOKEN
 
-const bot = new TelegramBot(BOT_TOKEN);
+const bot = new TelegramBot(token);
 
 app.post('/api/telegram', (req, res) => {
     bot.processUpdate(req.body);
@@ -44,10 +44,10 @@ bot.onText(/\/start (.+)/, (msg, match) => {
 });
 
 // Default endpoint for health checks
-app.get('/', (req, res) => {
+app.get('/', (res) => {
     res.send('Bot is running');
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server running on http://localhost:${PORT}`);
+// });
