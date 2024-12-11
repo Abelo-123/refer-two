@@ -1,5 +1,5 @@
-import express from 'express';
-import TelegramBot from 'node-telegram-bot-api';
+const TelegramBot = require('node-telegram-bot-api');
+const express = require('express');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
