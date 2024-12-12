@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "app/api/telegram/bot.py",
+        "src": "/api/telegram/bot.py",
         "use": "@vercel/python"
       },
       {

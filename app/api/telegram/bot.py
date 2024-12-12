@@ -3,6 +3,7 @@ import logging
 from telegram import Bot, Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 from fastapi.responses import JSONResponse
+import mangum  # Import Mangum to wrap the FastAPI app for serverless
 
 app = FastAPI()
 
@@ -52,6 +53,5 @@ async def webhook(request: Request):
         logger.error(f"Error processing update: {str(e)}")
         return JSONResponse(content={"status": "error", "message": str(e)})
 
-# Vercel serverless handler entry point
-def handler(event, context):
-    return app(event, context)
+# Wrap FastAPI with Mangum to work in serverless environments
+handler = mangum.Mangum(app)
