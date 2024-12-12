@@ -1,11 +1,13 @@
 from fastapi import FastAPI, Request
 import logging
-from telegram import Update, Bot
+from telegram import Bot
 from telegram.ext import Application, CommandHandler, CallbackContext
+from telegram import Update
 import os
 import asyncio
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
+# Initialize FastAPI app
 app = FastAPI()
 
 # Set up logging
@@ -54,6 +56,7 @@ async def webhook(request: Request):
         logger.error(f"Error processing update: {str(e)}")
         return {"status": "error", "message": str(e)}
 
-# Entry point for Vercel serverless function
+# Vercel handler
 def handler(event, context):
-    return asyncio.run(app(event, context))
+    return app(event, context)
+
