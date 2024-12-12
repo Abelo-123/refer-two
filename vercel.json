@@ -2,8 +2,8 @@
     "version": 2,
     "builds": [
       {
-        "src": "app/api/telegram/bot.js",
-        "use": "@vercel/node"
+        "src": "app/api/telegram/bot.py",
+        "use": "@vercel/python"
       },
       {
         "src": "next.config.js",
@@ -13,7 +13,7 @@
     "routes": [
       {
         "src": "/api/telegram",
-        "dest": "/app/api/telegram/bot.js"
+        "dest": "/app/api/telegram/bot.py"
       },
       {
         "src": "/(.*)",
