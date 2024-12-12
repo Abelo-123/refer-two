@@ -2,8 +2,6 @@ from fastapi import FastAPI, Request
 import logging
 from telegram import Bot, Update
 from telegram.ext import Application, CommandHandler, CallbackContext
-import os
-from starlette.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import JSONResponse
 
 app = FastAPI()
@@ -54,6 +52,6 @@ async def webhook(request: Request):
         logger.error(f"Error processing update: {str(e)}")
         return JSONResponse(content={"status": "error", "message": str(e)})
 
-# Vercel handler to wrap the FastAPI app (Vercel-specific)
+# Vercel serverless handler entry point
 def handler(event, context):
     return app(event, context)
