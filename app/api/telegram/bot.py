@@ -92,7 +92,7 @@ async def start(update: Update, context: CallbackContext):
 application.add_handler(CommandHandler("start", start))
 
 # Webhook route for Telegram updates
-@app.post("/webhook")
+@app.post("/api/telegram/webhook")
 async def webhook(request: Request):
     try:
         # Parse the incoming webhook data
